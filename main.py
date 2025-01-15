@@ -41,3 +41,15 @@ class University:
         confirmation_event = BooksApplicationSentEvent(event.payload["student_id_number"], is_confirmed=True)
         event_queue.append(confirmation_event)
         print('application', confirmation_event.name, 'done!')
+
+
+# Code Usage
+alvin = Student("alvin", "Opoti", '7.02.2022', 'Nairobi', '234578645', '34461')
+marcus = Student("marcus", "farah", '9.02.2024', 'Nairobi', '456783987', '89991')
+daniel = Student("daniel", "ole", '14.02.2020', 'Nairobi', '253874659', '23441')
+
+alvin.ask_for_emask_for_book_application_appointmentbassy_appointment('20.12.2024')
+marcus.ask_for_book_application_appointment('21.12.2024')
+daniel.ask_for_book_application_appointment('22.12.2024')
+
+University_of_Technology_and_Arts = University('UTA', 'Warsaw, Ols 12', '234678987', 'uts@edu.tr')
